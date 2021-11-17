@@ -1,0 +1,34 @@
+<view class="detail-start">
+  <view class="detail-contailer" style="background:url({{detail.cover.image.large.url}}) no-repeat top/cover">
+  </view>
+  <view class="detail-info">
+    <image src='{{detail.cover.image.large.url}}' class='detail-img'></image>
+    <view class="detail">
+      <view class="detail-nm">{{detail.title}}</view>
+      <view>{{detail.original_title}}</view>
+      <view>评分： {{detail.rating.value}}分</view>
+      <view>{{detail.countries[0]}} / {{detail.durations[0]}}</view>
+      <view> 导演: {{detail.directors[0].name}}</view>
+      <view> 演员列表: {{detail.card_subtitle}}</view>
+      <!-- <view>播放影片：</view> -->
+      
+    </view>
+    <view class="desc">影片介绍：{{detail.intro}}</view>
+    <video class="video-player" src="{{detail.trailer.video_url}}" id ="{{detail.trailer.id}}" danmu-list="{{videoContext}}" picture-in-picture-mode="{{['push', 'pop']}}" show-progress="{{true}}" autoplay="{{auto}}" show-casting-button="{{true}}" show-fullscreen-btn="{{true}}" show-screen-lock-button="{{true}}" enable-auto-rotation="{{true}}" enable-progress-gesture="{{true}}" bindenterpictureinpicture='bindVideoEnterPictureInPicture' bindleavepictureinpicture='bindVideoLeavePictureInPicture' bindfullscreenchange="screenChange" show-center-play-btn='{{true}}'
+    show-play-btn="{{true}}" controls play-btn-position="button"
+    bindplay='bindplay' bindpause='bindpause' bindended='bindended' bindtimeupdate="videoUpdate"></video>
+    <input placeholder="发送弹幕吧" class="detail_input" bindblur="bindInputBlur"/>
+    <button bindtap="bindSendDanmu" id="{{item.id}}" objectFit="fill">发送弹幕</button>
+    <van-field
+    value="{{ content }}"
+    placeholder="说点什么吧"
+    bind:change="onContentChange"></van-field>
+    <van-rate class="rate_score" value="{{ score }}" bind:change="onScoreChage"/>
+    <van-button type="warning" bindtap="upLoadImg">上传图片</van-button>
+    <view>
+      <image src="{{item}}" wx:for="{{images}}" wx:key="index">
+      </image>
+    </view>
+    <van-button type="danger" size ="large" bindtap="submit">提交评价</van-button>
+  </view>
+</view>

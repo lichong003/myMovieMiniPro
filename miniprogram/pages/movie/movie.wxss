@@ -1,0 +1,30 @@
+.movie{
+  height: 300rpx;
+  display: flex;
+  border-bottom:10px solid  #ccc;
+}
+.movie-img{
+  width: 400rpx;
+  height: 100%;
+}
+.movie-info{
+  position: relative;
+
+}
+.movie-title{
+  color: #666;
+  font-size: 40rpx;
+}
+.movie-score{
+  color: #faaf00;
+}
+.movie-common{
+  position: absolute;
+  width: 120rpx;
+  height: 60rpx;
+  background-color: #E54847;
+  color:#fff;
+  font-size:26rpx;
+  top:10rpx;
+  right: 10rpx; 
+}

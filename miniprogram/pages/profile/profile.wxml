@@ -1,0 +1,3 @@
+<open-data type="userAvatarUrl"></open-data>
+<open-data type="userNickName"></open-data>
+<button class="btn_user" open-type="getUserInfo" bindgetuserinfo="onGotoUserInfo">获取用户信息</button>

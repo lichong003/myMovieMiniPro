@@ -1,0 +1,29 @@
+{
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "id": -1,
+          "name": "db guide",
+          "pathName": "pages/databaseGuide/databaseGuide",
+          "query": ""
+        },
+        {
+          "name": "common",
+          "pathName": "pages/common/common",
+          "query": "movieid=35422807",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

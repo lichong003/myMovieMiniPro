@@ -1,0 +1,33 @@
+<view class="movie" wx:for="{{movelist}}" wx:key="index">
+  <image class="movie-img" src="{{item.cover.url}}"></image>
+  <view class="movie-info">
+    <view class="movie-title"> {{item.title}}</view>
+    <view>观众评分：
+      <text class="movie-score">{{item.release_date}}分</text>
+    </view>
+    
+    <view>主演</view>
+    <view>{{item.card_subtitle}}</view>
+    <button class="movie-common" bindtap="gotoCommon" data-movieid="{{item.id}}">观看详情</button>
+  </view>
+</view>
+
+<!-- <scroll-view class="page-body" scroll-y="true">
+       <view class="meta">
+          <image class="poster" src="{{movie.images.large}}" background-size="cover"></image>
+             <text class="title">{{movie.title}}({{movie.year}})</text>
+             <text class="info">
+                评分：{{movie.rating.average}}
+             </text>
+             <text class="info">
+                导演：<block wx:for="{{movie.directors}}">{{item.name}}</block>
+             </text>
+             <text class="info">
+                主演：<block wx:for="{{movie.casts}}">{{item.name}} </block>
+             </text>
+       </view>
+       <view class="summary">
+         <text class="label">摘要：</text>
+         <text class="content">{{movie.summary}}</text>
+       </view>
+</scroll-view> -->
